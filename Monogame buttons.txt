@@ -1,0 +1,31 @@
+_spriteBatch.Draw(ButtonTexture,ButtonRectangle,Color.White);
+
+ButtonRectangle = new Rectangle(ScreenX * 0.4,ScreenY*0.5,ScreenX * 0.1,ScreenY*0.1);
+
+MouseState mouse = Mouse.GetState();
+if(ButtonRectangle.Contains(mouse.Position) &amp;&amp; mouse.LeftButton == ButtonState.Pressed)
+{
+//do stuff
+}
+
+ ----------------------- 
+_spriteBatch.Draw(ButtonTexture,ButtonRectangle,Color.White);
+
+ButtonRectangle = new Rectangle(ScreenX * 0.4,ScreenY*0.5,ScreenX * 0.1,ScreenY*0.1);
+
+MouseState mouse = Mouse.GetState();
+if(ButtonRectangle.Contains(mouse.Position) &amp;&amp; mouse.LeftButton == ButtonState.Pressed)
+{
+//do stuff
+}
+
+ ----------------------- 
+_spriteBatch.Draw(ButtonTexture,ButtonRectangle,Color.White);
+
+ButtonRectangle = new Rectangle(ScreenX * 0.4,ScreenY*0.5,ScreenX * 0.1,ScreenY*0.1);
+
+MouseState mouse = Mouse.GetState();
+if(ButtonRectangle.Contains(mouse.Position) &amp;&amp; mouse.LeftButton == ButtonState.Pressed)
+{
+//do stuff
+}

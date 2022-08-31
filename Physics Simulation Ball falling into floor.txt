@@ -1,0 +1,10 @@
+if (particle.Top &lt; 0)
+{
+    velocity.Y = -velocity.Y;
+    particle.Y = -particle.Y;
+}
+else if (particle.Bottom &gt;= GraphicsDevice.ViewPort.Height)
+{
+    velocity.Y = -velocity.Y;
+    particle.Y = GraphicsDevice.ViewPort.Height - (particle.Bottom - GraphicsDevice.ViewPort.Height + particle.Height);
+}

@@ -1,0 +1,12 @@
+int scaledSize = (int)(sizeOfSprites * scale);
+Microsoft.Xna.Framework.Rectangle position = new Microsoft.Xna.Framework.Rectangle(
+  cell.X * scaledSize,
+  cell.Y * scaledSize,
+  scaledSize,
+  scaledSize
+);
+
+ ----------------------- 
+Microsoft.Xna.Framework.Rectangle position = new Microsoft.Xna.Framework.Rectangle(
+  (int)(cell.X * SIZE),  (int)(cell.Y * SIZE),  SIZE, SIZE);
+);

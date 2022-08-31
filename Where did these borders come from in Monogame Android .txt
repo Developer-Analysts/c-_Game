@@ -1,0 +1,7 @@
+#if ANDROID
+            graphics.IsFullScreen = true;                
+            graphics.PreferredBackBufferWidth = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Width;
+            graphics.PreferredBackBufferHeight = GraphicsAdapter.DefaultAdapter.CurrentDisplayMode.Height;
+            graphics.SupportedOrientations = DisplayOrientation.Portrait;//if your game does NOT support for anything else but portrait mode
+            graphics.ApplyChanges();
+#endif

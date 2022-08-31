@@ -1,0 +1,10 @@
+dotnet tool install --global dotnet-mgcb-editor
+mgcb-editor --register
+
+"mgcb.pipelineToolPath": "mgcb-editor"
+
+ ----------------------- 
+dotnet tool install --global dotnet-mgcb-editor
+mgcb-editor --register
+
+"mgcb.pipelineToolPath": "mgcb-editor"

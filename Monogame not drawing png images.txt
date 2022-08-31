@@ -1,0 +1,23 @@
+protected override void LoadContent()
+        {
+            _spriteBatch = new SpriteBatch(GraphicsDevice);
+
+            
+            realisticSturgeonSprite = Texture2D.FromFile(GraphicsDevice,@"Lake_Sturgeon.png"); 
+  // you can add path if needed (copy to output option above doesn't need it)
+        }
+
+
+        protected override void Draw(GameTime gameTime)
+        {
+            GraphicsDevice.Clear(Color.CornflowerBlue);
+
+            _spriteBatch.Begin();
+
+            _spriteBatch.Draw(realisticSturgeonSprite, new Vector2(50, 60), Color.White);
+
+            _spriteBatch.End();
+           
+
+            base.Draw(gameTime);
+        }

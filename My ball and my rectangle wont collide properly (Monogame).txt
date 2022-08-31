@@ -1,0 +1,34 @@
+public void enemyCollision(Rectangle enemyRectangle)
+{
+    if (ballRectangle.Intersects(enemyRectangle))
+        ballDirectionY = false;
+}
+
+public void enemyCollision(Rectangle enemyRectangle)
+{
+    if (ballRectangle.Intersects(enemyRectangle))
+    {
+        if (ballRectangle.x &gt; enemyRectangle.x &amp;&amp; 
+            ballRectangle.x &lt; enemyRectangle.x + enemyRectangle.Width &amp;&amp; 
+            ballRectangle.y &gt; enemyRectangle.y)
+             ballDirectionY = false;
+    }
+}
+
+ ----------------------- 
+public void enemyCollision(Rectangle enemyRectangle)
+{
+    if (ballRectangle.Intersects(enemyRectangle))
+        ballDirectionY = false;
+}
+
+public void enemyCollision(Rectangle enemyRectangle)
+{
+    if (ballRectangle.Intersects(enemyRectangle))
+    {
+        if (ballRectangle.x &gt; enemyRectangle.x &amp;&amp; 
+            ballRectangle.x &lt; enemyRectangle.x + enemyRectangle.Width &amp;&amp; 
+            ballRectangle.y &gt; enemyRectangle.y)
+             ballDirectionY = false;
+    }
+}

@@ -1,0 +1,58 @@
+Texture2D pixel = new Texture2D(GraphicsDevice, 1, 1);
+pixel.SetData(new Color[] {Color.White});
+
+ ----------------------- 
+Texture2D Tex, Tex1, Tex2;
+const int WIDTH = 32;
+const int HEIGHT = 32;
+Color[] TexSource = new Color[WIDTH * HEIGHT];
+
+int radius = 5;
+point center = new Point(WIDTH &gt;&gt; 2, HEIGHT &gt;&gt; 2);
+Tex = new Texture2D(GraphicsDevice, WIDTH, HEIGHT);
+for(int x = 0 ; x &lt; WIDTH; x++)
+  for(int y = 0 ; y &lt; HEIGHT; y++)
+    if(Math.Sqrt((x - center.x)* (x - center.x)) &lt; radius &amp;&amp; Math.Sqrt((y - center.y) * (y - center.y) &lt; radius))
+       TexSource[x + y * WIDTH] = Color.Red;
+    else
+       TexSource[x + y * WIDTH] = Color.White;
+  Tex = SetData&lt;Color&gt;(TexSource);    
+  //The resulting texture is a red circle on a white background.
+
+  //If you want to draw on top of an existing texture Tex1 as Tex2:
+  Tex1 = Content.Load&lt;Texture2D&gt;(Tex1Name);
+  Tex2 = new Texture2D(GraphicsDevice, Tex1.Width, Tex1.Height);
+  TexSource = Tex1.GetData&lt;Color&gt;();
+  // Draw a white \ on the image, we will assume tex1 is square for this task
+  for(int x = 0 ; x &lt; Tex1.Width; x++)
+    for(int y = 0 ; y &lt; Tex1.Width; y++)
+       if(x==y) TexSource[x + y * Tex1.Width] = Color.White;
+
+
+ ----------------------- 
+Texture2D Tex, Tex1, Tex2;
+const int WIDTH = 32;
+const int HEIGHT = 32;
+Color[] TexSource = new Color[WIDTH * HEIGHT];
+
+int radius = 5;
+point center = new Point(WIDTH &gt;&gt; 2, HEIGHT &gt;&gt; 2);
+Tex = new Texture2D(GraphicsDevice, WIDTH, HEIGHT);
+for(int x = 0 ; x &lt; WIDTH; x++)
+  for(int y = 0 ; y &lt; HEIGHT; y++)
+    if(Math.Sqrt((x - center.x)* (x - center.x)) &lt; radius &amp;&amp; Math.Sqrt((y - center.y) * (y - center.y) &lt; radius))
+       TexSource[x + y * WIDTH] = Color.Red;
+    else
+       TexSource[x + y * WIDTH] = Color.White;
+  Tex = SetData&lt;Color&gt;(TexSource);    
+  //The resulting texture is a red circle on a white background.
+
+  //If you want to draw on top of an existing texture Tex1 as Tex2:
+  Tex1 = Content.Load&lt;Texture2D&gt;(Tex1Name);
+  Tex2 = new Texture2D(GraphicsDevice, Tex1.Width, Tex1.Height);
+  TexSource = Tex1.GetData&lt;Color&gt;();
+  // Draw a white \ on the image, we will assume tex1 is square for this task
+  for(int x = 0 ; x &lt; Tex1.Width; x++)
+    for(int y = 0 ; y &lt; Tex1.Width; y++)
+       if(x==y) TexSource[x + y * Tex1.Width] = Color.White;
+

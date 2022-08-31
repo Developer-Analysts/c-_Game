@@ -1,0 +1,44 @@
+float newRotation = targetY;
+
+if (targetY &lt; MathHelper.ToRadians(90) &amp;&amp; currentY &gt; MathHelper.ToRadians(270))
+{
+    newRotation = targetY + MathHelper.ToRadians(360);
+}
+if (targetY &gt; MathHelper.ToRadians(270) &amp;&amp; currentY &lt; MathHelper.ToRadians(90))
+{
+    newRotation = targetY - MathHelper.ToRadians(360);
+}
+if (currentY &lt; newRotation)
+{
+    currentY += (newRotation - currentY) / rotateSpeed;
+}
+if (currentY &gt; newRotation)
+{
+    currentY -= Math.Abs(newRotation - currentY) / rotateSpeed;
+}
+
+if (currentY &gt;= MathHelper.Pi * 2) currentY = 0.0f;
+if (currentY &lt; 0) currentY = MathHelper.Pi * 2;
+
+ ----------------------- 
+float newRotation = targetY;
+
+if (targetY &lt; MathHelper.ToRadians(90) &amp;&amp; currentY &gt; MathHelper.ToRadians(270))
+{
+    newRotation = targetY + MathHelper.ToRadians(360);
+}
+if (targetY &gt; MathHelper.ToRadians(270) &amp;&amp; currentY &lt; MathHelper.ToRadians(90))
+{
+    newRotation = targetY - MathHelper.ToRadians(360);
+}
+if (currentY &lt; newRotation)
+{
+    currentY += (newRotation - currentY) / rotateSpeed;
+}
+if (currentY &gt; newRotation)
+{
+    currentY -= Math.Abs(newRotation - currentY) / rotateSpeed;
+}
+
+if (currentY &gt;= MathHelper.Pi * 2) currentY = 0.0f;
+if (currentY &lt; 0) currentY = MathHelper.Pi * 2;
